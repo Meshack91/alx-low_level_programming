@@ -1,28 +1,28 @@
 #include "main.h"
 /**
  * cap_string - capitalizes all words of a string
- * @str: input string.
+ * @s: input string.
  * Return: the pointer to dest.
  */
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
-int i = 0;
+	int i = 0;
 
-while (str[i] != '\0')
-{
-if (str[i] >= 'a' && str[i] <= 'z')
-{
-if (i == 0 || str[i - 1] == ' ' || str[i - 1] == '\t' || str[i - 1] == '\n' ||
-					str[i - 1] == ',' || str[i - 1] == ';' || str[i - 1] == '.' ||
-					str[i - 1] == '!' || str[i - 1] == '?' || str[i - 1] == '"' ||
-					str[i - 1] == '(' || str[i - 1] == ')' || str[i - 1] == '{' ||
-					str[i - 1] == '}')
-{
-				str[i] -= 32;
-}
-}
-i++;
-}
+	while (s[i] != '\0')
+	{
+		if (s[i] >= 'a' && s[i] <= 'z')
+		{
+			if (i == 0 || s[i - 1] == ' ' || s[i - 1] == '\t' || s[i - 1] == '\n' ||
+					s[i - 1] == ',' || s[i - 1] == ';' || s[i - 1] == '.' ||
+					s[i - 1] == '!' || s[i - 1] == '?' || s[i - 1] == '"' ||
+					s[i - 1] == '(' || s[i - 1] == ')' || s[i - 1] == '{' ||
+					s[i - 1] == '}')
+			{
+				s[i] -= 32;
+			}
+		}
+		i++;
+	}
 
-return (str);
+	return (s);
 }
